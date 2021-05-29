@@ -290,7 +290,7 @@ $(document).ready(function () {
                         if(projets.title=="Projet I Modélisation et réalisation de capteurs piézoélectriques en céramiques et en composites polymère/céramique pour la récupération de l’énergie vibratoire"){
                             op+=`<div class="col-lg-4 mb-5 mb-lg-0">`+
                            `<ul class="nav nav-tabs flex-column">`+
-                                `<li class="nav-item">`+
+                                `<li class="nav-item active show">`+
                                     `<a class="nav-link " data-toggle="tab" href="#tab${i}">`+
                                         `<p>${projets.title}</p>`+
                                     `</a>`+
@@ -314,7 +314,7 @@ $(document).ready(function () {
                        
                         op+= `<div class="col-lg-8">`+
                         `<div class="tab-content">`+
-                            `<div class="tab-pane  " id="tab${i}">`+
+                            `<div class="tab-pane  active show" id="tab${i}">`+
                                 `<h3>${projets.title}</h3>`+
                                 `<p>${projets.description}</p>`+
                             `</div>`+
