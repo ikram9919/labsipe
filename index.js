@@ -50,42 +50,43 @@ $(document).ready(function () {
 
                             if (user.profilePicture instanceof Object && user.profilePicture.data != undefined ) {
 
-                                op += '<div class="member" data-aos="fade-up" >' +
-                                '<div class="member-img">' +
-                                `<img class="img-fluid" src="data:${user.profilePicture.mimetype};base64,${btoa(new Uint8Array(user.profilePicture.data.data).reduce((data, byte) => data + String.fromCharCode(byte), ''))}" style=" width:100%; height:350px !important;"  alt="">` +
-                               '<div class="social" >' +
-                                    '<a href=""><i class="icofont-twitter"></i></a>' +
-                                    '<a href=""><i class="icofont-facebook"></i></a>' +
-                                    '<a href=""><i class="icofont-instagram"></i></a>' +
-                                    '<a href=""> <i class="icofont-linkedin"></i></a>' +
-                                    '</div>' +
-                                    '</div>'+
-                                    '<div class="member-info" >' +
-                                    `<h4 > ${user.firstName} ${user.lastName}</h4>` +
-                                    `<span>Directeur de LABSIPE</span>` +
-                                    
-                                    
-                                    '</div>' +
-                                    '</div>'
-                            } else {
-                                op += '<div class="member" data-aos="fade-up" >' +
-                                '<div class="member-img">' +
-                                `<img class="img-fluid" src="https://ui-avatars.com/api/?name=${user.firstName}+${user.lastName} "  alt="">` +
-                                
-                                '<div class="social" >' +
+                                op += '<div class="col-lg-6">' +
+                                '<div class="member d-flex align-items-start">' +
+                                `<div><img class="sp_img" src="data:${user.profilePicture.mimetype};base64,${btoa(new Uint8Array(user.profilePicture.data.data)
+                                    .reduce((data, byte) => data + String.fromCharCode(byte), '')
+                                )}" style="height:100px;width:100px" alt=""></div>` +
+                                '<div class="member-info">' +
+                                `<h4>Prof. ${user.firstName} ${user.lastName}</h4>` +
+                                `<h6>Directeur de laboratoire</h6>` +
+                                `<span></span>` +
+                                '<div class="social">' +
                                 '<a href=""><i class="icofont-twitter"></i></a>' +
                                 '<a href=""><i class="icofont-facebook"></i></a>' +
                                 '<a href=""><i class="icofont-instagram"></i></a>' +
                                 '<a href=""> <i class="icofont-linkedin"></i></a>' +
                                 '</div>' +
-                                '</div>'+
-                                '<div class="member-info" >' +
-                                `<h4 > ${user.firstName} ${user.lastName}</h4>` +
-                                `<span>Directeur de LABSIPE</span>` +
-                                
-                                
                                 '</div>' +
-                                '</div>' 
+                                '</div>' +
+                                '</div>' +
+                                '</div>'
+                            } else {
+                                op += '<div class="col-lg-6">' +
+                                '<div class="member d-flex align-items-start">' +
+                                `<div><img class="sp_img" src="https://ui-avatars.com/api/?name=${user.firstName}+${user.lastName}?size=128" alt=""></div>` +
+                                '<div class="member-info">' +
+                                `<h4>Prof. ${user.firstName} ${user.lastName}</h4>` +
+                                `<h6>Directeur de laboratoire, Chef d'équipe</h6>` +
+                                `<span></span>` +
+                                '<div class="social">' +
+                                '<a href=""><i class="icofont-twitter"></i></a>' +
+                                '<a href=""><i class="icofont-facebook"></i></a>' +
+                                '<a href=""><i class="icofont-instagram"></i></a>' +
+                                '<a href=""> <i class="icofont-linkedin"></i></a>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>'
                             }
                         }
                     })
@@ -95,41 +96,42 @@ $(document).ready(function () {
                         if (user.lastName != "HAJJAJI" && user.lastName != "EL BALLOUTI" && user.lastName != "TOUHTOUH" && user.lastName != "KANDOUSSI" && user.lastName != "ACHAK" && user.lastName != "EL BEID" && user.lastName != "KADDAR") {
                             if (user.profilePicture instanceof Object && user.profilePicture.data != undefined ) {
                                 if (user.roles.includes("CED_HEAD")) return ["chef de CED"];
-                                op += '<div class="member" data-aos="fade-up" >' +
-                                '<div class="member-img">' +
-                                `<img class="img-fluid" src="data:${user.profilePicture.mimetype};base64,${btoa(new Uint8Array(user.profilePicture.data.data).reduce((data, byte) => data + String.fromCharCode(byte), ''))}" style=" width:100%; height:350px !important;"  alt="">` +
-                               '<div class="social" >' +
-                                    '<a href=""><i class="icofont-twitter"></i></a>' +
-                                    '<a href=""><i class="icofont-facebook"></i></a>' +
-                                    '<a href=""><i class="icofont-instagram"></i></a>' +
-                                    '<a href=""> <i class="icofont-linkedin"></i></a>' +
-                                    '</div>' +
-                                    '</div>'+
-                                    '<div class="member-info" >' +
-                                    `<h4 > ${user.firstName} ${user.lastName}</h4>` +
-                                    `<span>${user.roles}</span>` +
-                                    
-                                    
-                                    '</div>' +
-                                    '</div>'
-
-                            } else {
-                                op += '<div class="member" data-aos="fade-up" >' +
-                                '<div class="member-img">' +
-                                `<img class="img-fluid" src="https://ui-avatars.com/api/?name=${user.firstName}+${user.lastName} "  alt="">` +
-                                
-                                '<div class="social" >' +
+                                op += '<div class="col-lg-6">' +
+                                '<div class="member d-flex align-items-start">' +
+                                `<div><img class="sp_img" src="data:${user.profilePicture.mimetype};base64,${btoa(new Uint8Array(user.profilePicture.data.data)
+                                    .reduce((data, byte) => data + String.fromCharCode(byte), '')
+                                )}" style="height:100px;width:100px" alt=""></div>` +
+                                '<div class="member-info">' +
+                                `<h4>Prof. ${user.firstName} ${user.lastName}</h4>` +
+                                `<h6>${user.roles}</h6>` +
+                                `<span></span>` +
+                                '<div class="social">' +
                                 '<a href=""><i class="icofont-twitter"></i></a>' +
                                 '<a href=""><i class="icofont-facebook"></i></a>' +
                                 '<a href=""><i class="icofont-instagram"></i></a>' +
                                 '<a href=""> <i class="icofont-linkedin"></i></a>' +
                                 '</div>' +
-                                '</div>'+
-                                '<div class="member-info" >' +
-                                `<h4 > ${user.firstName} ${user.lastName}</h4>` +
-                                `<span>${user.roles}</span>` +
-                                
-                                
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>'
+
+                            } else {
+                                op += '<div class="col-lg-6">' +
+                                '<div class="member d-flex align-items-start">' +
+                                `<div><img class="sp_img" src="https://ui-avatars.com/api/?name=${user.firstName}+${user.lastName}?size=128" alt=""></div>` +
+                                '<div class="member-info">' +
+                                `<h4>Prof. ${user.firstName} ${user.lastName}</h4>` +
+                                `<h6>${user.roles}</h6>` +
+                                `<span></span>` +
+                                '<div class="social">' +
+                                '<a href=""><i class="icofont-twitter"></i></a>' +
+                                '<a href=""><i class="icofont-facebook"></i></a>' +
+                                '<a href=""><i class="icofont-instagram"></i></a>' +
+                                '<a href=""> <i class="icofont-linkedin"></i></a>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
                                 '</div>' +
                                 '</div>'
                             }
@@ -138,61 +140,51 @@ $(document).ready(function () {
                         else if (user.lastName != "HAJJAJI" && user.lastName == "EL BALLOUTI" || user.lastName == "TOUHTOUH" || user.lastName == "KANDOUSSI" || user.lastName == "ACHAK" ||  user.lastName == "EL BEID" || user.lastName == "KADDAR" ){
                             if (user.profilePicture instanceof Object && user.profilePicture.data != undefined ) {
 
-                                op +=  '<div class="member" data-aos="fade-up" >' +
-                                '<div class="member-img">' +
-                                `<img class="img-fluid" src="data:${user.profilePicture.mimetype};base64,${btoa(new Uint8Array(user.profilePicture.data.data).reduce((data, byte) => data + String.fromCharCode(byte), ''))}" style=" width:100%; height:350px !important;"  alt="">` +
-                               '<div class="social" >' +
-                                    '<a href=""><i class="icofont-twitter"></i></a>' +
-                                    '<a href=""><i class="icofont-facebook"></i></a>' +
-                                    '<a href=""><i class="icofont-instagram"></i></a>' +
-                                    '<a href=""> <i class="icofont-linkedin"></i></a>' +
-                                    '</div>' +
-                                    '</div>'+
-                                    '<div class="member-info" >' +
-                                    `<h4 > ${user.firstName} ${user.lastName}</h4>` +
-                                    `<span >Chef d'équipe </span>` +
-                                    
-                                    
-                                    '</div>' +
-                                    '</div>'
-
-                            }
-                            else{
-                                op += '<div class="member" data-aos="fade-up" >' +
-                                '<div class="member-img">' +
-                                `<img class="img-fluid" src="https://ui-avatars.com/api/?name=${user.firstName}+${user.lastName} "  alt="">` +
-                                
-                                '<div class="social" >' +
+                                op +=   '<div class="col-lg-6">' +
+                                '<div class="member d-flex align-items-start">' +
+                                `<div><img class="sp_img" src="data:${user.profilePicture.mimetype};base64,${btoa(new Uint8Array(user.profilePicture.data.data)
+                                    .reduce((data, byte) => data + String.fromCharCode(byte), '')
+                                )}" style="height:100px;width:100px" alt=""></div>` +
+                                '<div class="member-info">' +
+                                `<h4>Prof. ${user.firstName} ${user.lastName}</h4>` +
+                                `<h6>Chef d'équipe</h6>` +
+                                `<span></span>` +
+                                '<div class="social">' +
                                 '<a href=""><i class="icofont-twitter"></i></a>' +
                                 '<a href=""><i class="icofont-facebook"></i></a>' +
                                 '<a href=""><i class="icofont-instagram"></i></a>' +
                                 '<a href=""> <i class="icofont-linkedin"></i></a>' +
                                 '</div>' +
-                                '</div>'+
-                                '<div class="member-info" >' +
-                                `<h4 > ${user.firstName} ${user.lastName}</h4>` +
-                                `<span>Chef d'équipe</span>` +
-                                
-                                
                                 '</div>' +
-                                '</div>' 
+                                '</div>' +
+                                '</div>' +
+                                '</div>'
+
+                            }
+                            else{
+                                op += '<div class="col-lg-6">' +
+                                '<div class="member d-flex align-items-start">' +
+                                `<div><img class="sp_img" src="https://ui-avatars.com/api/?name=${user.firstName}+${user.lastName}?size=128" alt=""></div>` +
+                                '<div class="member-info">' +
+                                `<h4>Prof. ${user.firstName} ${user.lastName}</h4>` +
+                                `<h6>Chef d'équipe</h6>` +
+                                `<span></span>` +
+                                '<div class="social">' +
+                                '<a href=""><i class="icofont-twitter"></i></a>' +
+                                '<a href=""><i class="icofont-facebook"></i></a>' +
+                                '<a href=""><i class="icofont-instagram"></i></a>' +
+                                '<a href=""> <i class="icofont-linkedin"></i></a>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>'
                             }
                             }
                     })
-                    chercheurs.trigger('destroy.owl.carousel'); 
-                    chercheurs.find('.owl-stage-outer').children().unwrap();
-                    chercheurs.removeClass("owl-center owl-loaded owl-text-select-on");
-                chercheurs.html(op)
 
-                chercheurs.owlCarousel({
-                    items: 3,
-                    loop: true,
-                    margin: 50,
-                    autoplay: true,
-                    autoplayTimeout: 3000,
-                    autoplayHoverPause: true,
-                  
-                });
+                    chercheurs.html(op)
+                    
 
                
 
@@ -286,58 +278,44 @@ $(document).ready(function () {
                     var op = "";
                     var i=1;
 
+                    op+=`<div class="col-lg-4 mb-5 mb-lg-0">`;
+                    op+=`<ul class="nav nav-tabs flex-column">`;
                     response.data.forEach((projets)=>{
-                        if(projets.title=="Projet I Modélisation et réalisation de capteurs piézoélectriques en céramiques et en composites polymère/céramique pour la récupération de l’énergie vibratoire"){
-                            op+=`<div class="col-lg-4 mb-5 mb-lg-0">`+
-                           `<ul class="nav nav-tabs flex-column">`+
-                                `<li class="nav-item active show">`+
-                                    `<a class="nav-link " data-toggle="tab" href="#tab${i}">`+
-                                        `<p>${projets.title}</p>`+
-                                    `</a>`+
-                                `</li>`+
+                        
+                            
+                           if(projets.title=="Projet I Modélisation et réalisation de capteurs piézoélectriques en céramiques et en composites polymère/céramique pour la récupération de l’énergie vibratoire"){
+                                op+=`<li class="nav-item"><a class="nav-link active show" data-toggle="tab" href="#tab${i}"><p>${projets.title}</p></a></li>`;}else{
+                                    op+=`<li class="nav-item"><a class="nav-link " data-toggle="tab" href="#tab${i}"><p>${projets.title}</p></a></li>`;  
+                                }
+                                
 
-                            `</ul>`+
-
-                        `</div>`
-                        }else{op+=`<div class="col-lg-4 mb-5 mb-lg-0">`+
-                        `<ul class="nav nav-tabs flex-column">`+
-                             `<li class="nav-item">`+
-                                 `<a class="nav-link " data-toggle="tab" href="#tab${i}">`+
-                                     `<p>${projets.title}</p>`+
-                                 `</a>`+
-                             `</li>`+
-
-                         `</ul>`+
-
-                     `</div>`}
-                     if(projets.title=="Projet I Modélisation et réalisation de capteurs piézoélectriques en céramiques et en composites polymère/céramique pour la récupération de l’énergie vibratoire"){
-                       
-                        op+= `<div class="col-lg-8">`+
-                        `<div class="tab-content">`+
-                            `<div class="tab-pane  active show" id="tab${i}">`+
-                                `<h3>${projets.title}</h3>`+
-                                `<p>${projets.description}</p>`+
-                            `</div>`+
-
-                        `</div>`+
-                        `<br><br>`+
-                    `</div>`
-
-                        }else{
-                        op+=`<div class="col-lg-8">`+
-                        `<div class="tab-content">`+
-                            `<div class="tab-pane  " id="tab${i}">`+
-                                `<h3>${projets.title}</h3>`+
-                                `<p>${projets.description}</p>`+
-                            `</div>`+
-
-                        `</div>`+
-                        `<br><br>`+
-                    `</div>`
-                        }
-
-                        i=i+1;
+                                i=i+1
                     })
+                        op+= `</ul>`;
+
+                        op+=`</div>`
+                        op+=`<div class="col-lg-8">`
+                        op+=`<div class="tab-content">`
+
+                        j=1;
+                        response.data.forEach((projets)=>{
+                        if(projets.title=="Projet I Modélisation et réalisation de capteurs piézoélectriques en céramiques et en composites polymère/céramique pour la récupération de l’énergie vibratoire"){
+                           op+= `<div class="tab-pane  active show" id="tab${j}"><h3>${projets.title}</h3><p>${projets.description}</p></div>`;}else{
+                            op+= `<div class="tab-pane " id="tab${j}"><h3>${projets.title}</h3><p>${projets.description}</p></div>`;
+                           }
+
+                           j=j+1;
+                        })
+
+                        op+=`</div>`
+                        op+=`<br><br>`
+                    op+=`</div>`
+
+                        
+                     
+
+                        
+                  
                     projets.html(op)
 
 
@@ -346,6 +324,10 @@ $(document).ready(function () {
                     .catch(function (error) {
                         console.log(error)
                     })
+
+
+            
+
 
 
          //publications
