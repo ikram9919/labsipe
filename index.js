@@ -446,6 +446,22 @@ $(document).ready(function () {
                     console.log(error)
                 })
                 
+                //mot du directeur
+
+          backendApi.get('/mots', { params: { "laboratory_abbreviation": "LABSIPE" } })
+          .then(function (response) {
+              var mots = $('#motsInfo');
+              var op = "";
+
+              response.data.forEach((mots)=>{
+              op+=`<p>${mots.description}</p>`
+              })
+                  mots.html(op)
+
+              }).catch(function (error) {
+                  console.log(error)
+              })
+                
 
 
 
