@@ -279,7 +279,7 @@ $(document).ready(function () {
                 })
 
 
-                backendApi.get('/projets', { params: { "laboratory_abbreviation": "LTI" } })
+                backendApi.get('/projetsLab', { params: { "laboratory_abbreviation": "LTI" } })
                 .then(function (response) {
                     var projets = $('#projetsInfo');
                     var op = "";
@@ -433,7 +433,7 @@ $(document).ready(function () {
                 })
 
 
-                backendApi.get(`/projets/`, { params: { "laboratory_abbreviation": "LABSIPE"  } })
+                backendApi.get(`/projetsLab`, { params: { "laboratory_abbreviation": "LABSIPE"  } })
                 .then(function (response) {
                 console.log(response);
                 var projetsCount = $('#projetsCount');
