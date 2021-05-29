@@ -253,7 +253,7 @@ $(document).ready(function () {
             })
 
 
-            backendApi.get('/projets',  { params: { "laboratory_id": "5f40f53095de870017abef57" } })
+            backendApi.get('/projetsLab',  { params: { "laboratory_id": "5f40f53095de870017abef57" } })
             .then(function (response) {
                 var projets = $('#projetsInfo');
                 var op = "";
@@ -279,7 +279,7 @@ $(document).ready(function () {
                 })
 
 
-                backendApi.get('/projetsLab', { params: { "laboratory_abbreviation": "LTI" } })
+                backendApi.get('/projetsLab', { params: { "laboratory_abbreviation": "LABSIPE" } })
                 .then(function (response) {
                     var projets = $('#projetsInfo');
                     var op = "";
