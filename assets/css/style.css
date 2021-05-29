@@ -108,6 +108,15 @@ h1, h2, h3, h4, h5, h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+
+  .sp_img {
+    overflow:hidden;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    border-radius:100px;
+    width:94px;
+    height:94px;
+}
 }
 
 /*--------------------------------------------------------------
@@ -177,6 +186,15 @@ h1, h2, h3, h4, h5, h6 {
   #header .logo {
     font-size: 28px;
   }
+}
+
+.sp_img {
+  overflow:hidden;
+  -webkit-border-radius:100px;
+  -moz-border-radius:100px;
+  border-radius:100px;
+  width:110px;
+  height:110px;
 }
 
 /*--------------------------------------------------------------
@@ -1244,103 +1262,7 @@ section {
 
 /*--------------------------------------------------------------
 # Doctors
---------------------------------------------------------------*/
-.doctors .member {
-  margin-bottom: 20px;
-  overflow: hidden;
-  text-align: center;
-  border-radius: 4px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.1);
-  
-}
 
-.doctors .member .member-img {
-  position: relative;
-  overflow: hidden;
-}
-
-.doctors .member .social {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  height: 40px;
-  opacity: 0;
-  transition: ease-in-out 0.3s;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.85);
-}
-
-.doctors .member .social a {
-  transition: color 0.3s;
-  color: #555555;
-  margin: 0 10px;
-  padding-top: 8px;
-  display: inline-block;
-}
-
-.doctors .member .social a:hover {
-  color: #3fbbc0;
-}
-
-.doctors .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
-
-.doctors .member .member-info {
-  padding: 25px 15px;
-}
-
-.doctors .member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: #555555;
-}
-
-.doctors .member .member-info span {
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-  color: #aaaaaa;
-}
-
-.doctors .member .member-info p {
-  font-style: italic;
-  font-size: 14px;
-  line-height: 26px;
-  color: #777777;
-}
-
-.doctors .member:hover .social {
-  opacity: 1;
-}
-
-.doctors .owl-nav, .doctors .owl-dots {
-  margin-top: 5px;
-  text-align: center;
-}
-
-.doctors .owl-dot {
-  display: inline-block;
-  margin: 0 5px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd !important;
-}
-
-.doctors .owl-dot.active {
-  background-color: #3fbbc0 !important;
-}
-
-@media (max-width: 767px) {
-  .doctors {
-    margin: 30px 10px;
-  }
-}
 
 
 
@@ -1934,3 +1856,96 @@ section {
   width: 100%;
   height: 300px;
 }
+
+.chercheurs {
+    background: #fff;
+}
+
+.chercheurs .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.chercheurs .member .pic {
+    overflow: hidden;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.chercheurs .member .pic img {
+    transition: ease-in-out 0.3s;
+}
+
+.chercheurs .member:hover img {
+    transform: scale(1.1);
+}
+
+.chercheurs .member .member-info {
+    padding-left: 30px;
+}
+
+.chercheurs .member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #2c4964;
+}
+
+.chercheurs .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+}
+
+.chercheurs .member span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #b2c8dd;
+    bottom: 0;
+    left: 0;
+}
+
+.chercheurs .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
+
+.chercheurs .member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.chercheurs .member .social a {
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 32px;
+    height: 32px;
+    background: #a0bcd5;
+}
+
+.chercheurs .member .social a i {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 2px;
+}
+
+.chercheurs .member .social a:hover {
+    background: #1977cc;
+}
+
+.chercheurs .member .social a + a {
+    margin-left: 8px;
+}
+
