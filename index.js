@@ -253,7 +253,7 @@ $(document).ready(function () {
             })
 
 
-            backendApi.get('/projetsLab',  { params: { "laboratory_id": "5f40f53095de870017abef57" } })
+            backendApi.get('/projets',  { params: { "laboratory_id": "5f40f53095de870017abef57" } })
             .then(function (response) {
                 var projets = $('#projetsInfo');
                 var op = "";
