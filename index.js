@@ -258,6 +258,7 @@ $(document).ready(function () {
                 var projets = $('#projetsInfo');
                 var op = "";
 
+                var i =1;
                 response.data.forEach((projets)=>{
                     op+=`<div class="col-lg-4 col-md-6 d-flex align-items-stretch">`+
                         `<div class="icon-box">`+
@@ -283,29 +284,59 @@ $(document).ready(function () {
                 .then(function (response) {
                     var projets = $('#projetsInfo');
                     var op = "";
+                    var i=1;
 
                     response.data.forEach((projets)=>{
-                        op+=`<div class="col-lg-4 mb-5 mb-lg-0">`+
+                        if(projets.title=="Projet I Modélisation et réalisation de capteurs piézoélectriques en céramiques et en composites polymère/céramique pour la récupération de l’énergie vibratoire"){
+                            op+=`<div class="col-lg-4 mb-5 mb-lg-0">`+
                            `<ul class="nav nav-tabs flex-column">`+
                                 `<li class="nav-item">`+
-                                    `<a class="nav-link active show" data-toggle="tab" href="#tab-1">`+
+                                    `<a class="nav-link " data-toggle="tab" href="#tab${i}">`+
                                         `<p>${projets.title}</p>`+
                                     `</a>`+
                                 `</li>`+
 
                             `</ul>`+
-                        `</div>`+
-                        `<div class="col-lg-8">`+
-                            `<div class="tab-content">`+
-                                `<div class="tab-pane active show" id="tab-1">`+
-                                    `<h3>${projets.title}</h3>`+
-                                    `<p>${projets.description}</p>`+
-                                `</div>`+
 
-                            `</div>`+
-                            `<br><br>`+
                         `</div>`
+                        }else{op+=`<div class="col-lg-4 mb-5 mb-lg-0">`+
+                        `<ul class="nav nav-tabs flex-column">`+
+                             `<li class="nav-item">`+
+                                 `<a class="nav-link " data-toggle="tab" href="#tab${i}">`+
+                                     `<p>${projets.title}</p>`+
+                                 `</a>`+
+                             `</li>`+
 
+                         `</ul>`+
+
+                     `</div>`}
+                     if(projets.title=="Projet I Modélisation et réalisation de capteurs piézoélectriques en céramiques et en composites polymère/céramique pour la récupération de l’énergie vibratoire"){
+                       
+                        op+= `<div class="col-lg-8">`+
+                        `<div class="tab-content">`+
+                            `<div class="tab-pane  " id="tab${i}">`+
+                                `<h3>${projets.title}</h3>`+
+                                `<p>${projets.description}</p>`+
+                            `</div>`+
+
+                        `</div>`+
+                        `<br><br>`+
+                    `</div>`
+
+                        }else{
+                        op+=`<div class="col-lg-8">`+
+                        `<div class="tab-content">`+
+                            `<div class="tab-pane  " id="tab${i}">`+
+                                `<h3>${projets.title}</h3>`+
+                                `<p>${projets.description}</p>`+
+                            `</div>`+
+
+                        `</div>`+
+                        `<br><br>`+
+                    `</div>`
+                        }
+
+                        i=i+1;
                     })
                     projets.html(op)
 
@@ -315,10 +346,6 @@ $(document).ready(function () {
                     .catch(function (error) {
                         console.log(error)
                     })
-
-
-            
-
 
 
          //publications
