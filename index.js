@@ -414,12 +414,12 @@ $(document).ready(function () {
               console.log(error)
           })
 
-          backendApi.get('/teams/', { params: { "laboratory_abbreviation": "LABSIPE" } })
+          backendApi.get('/teamsLab/', { params: { "laboratory_abbreviation": "LABSIPE" } })
           .then(function (response) {
           console.log(response);
           var teamsCount = $('#teamsCount');
               var nbr = ""+response.data.length;
-              teamsCount.html(nbr-3);
+              teamsCount.html(nbr);
 
            
          
