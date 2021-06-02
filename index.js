@@ -457,7 +457,7 @@ $(document).ready(function () {
                 
                 //mot du directeur
 
-          backendApi.get('/mots', { params: { "laboratory_abbreviation": "LABSIPE" } })
+          backendApi.get('/motsLab', { params: { "laboratory_abbreviation": "LABSIPE" } })
           .then(function (response) {
               var mots = $('#motsInfo');
               var op = "";
